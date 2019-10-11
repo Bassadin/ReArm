@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1131516663234211204}
   - component: {fileID: 2016850204628271485}
   - component: {fileID: 3041936827686332653}
+  - component: {fileID: 6130341899851901857}
   m_Layer: 0
   m_Name: CubeBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6526184862603577212}
-  m_LocalRotation: {x: -0.15237166, y: -0.19136982, z: -0.030087482, w: 0.9691518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.76, y: 0.87, z: -4.6618624}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -17.87, y: -22.34, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1131516663234211204
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,3 +96,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6130341899851901857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6526184862603577212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fb3c33adc1aee44851b29129569feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRotationSpeedMax: -50
+  xRotationSpeedMin: 50
+  yRotationSpeedMax: -50
+  yRotationSpeedMin: 50
+  zRotationSpeedMax: -50
+  zRotationSpeedMin: 50
