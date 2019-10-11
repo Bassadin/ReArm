@@ -6,5 +6,5 @@ public abstract class BaseWeapon : MonoBehaviour
 {
     public GameObject bulletToInstatiate;
 
-    public abstract void fireWeapon();
+    public abstract void fireWeapon(Transform spawnPosition);
 }
