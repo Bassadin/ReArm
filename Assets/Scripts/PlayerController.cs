@@ -13,13 +13,6 @@ public class PlayerController : MonoBehaviour
         rigidbody3d = GetComponent<Rigidbody> ();
     }
 
-    void Update()
-    {
-        // if (Input.GetKeyDown(KeyCode.S)) {
-        //     this.transform.position.y += 1;
-        // }
-    }
-
     void FixedUpdate() {
         float moveVertical = Input.GetAxis("Vertical");
 

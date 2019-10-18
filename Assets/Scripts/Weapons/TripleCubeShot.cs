@@ -6,8 +6,8 @@ public class TripleCubeShot : BaseWeapon
 {
     public float horizontalSpeed = 350;
     public float verticalSpeed = 75;
-    public override void fireWeapon(Transform spawnPosition)
-    {
+
+    public override void fireWeapon(Transform spawnPosition) {
         GameObject upperBullet;
         upperBullet = Instantiate(this.bulletToInstatiate, spawnPosition);
         upperBullet.GetComponent<Rigidbody>().AddForce(new Vector3(horizontalSpeed, -verticalSpeed, 0));
