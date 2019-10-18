@@ -8,10 +8,6 @@ public class EnemySpawner : MonoBehaviour
     public EnemyController enemyToSpawn;
     private float timer = 0;
 
-    void Start() {
-        Destroy(gameObject, 20);
-    }
-
     void Update()
     {
         //Timer stuff
@@ -31,6 +27,5 @@ public class EnemySpawner : MonoBehaviour
                 0),
             Quaternion.identity);
         newEnemy.GetComponent<Rigidbody>().AddForce(new Vector3(-newEnemy.getSpeed(), 0, 0));
-        Debug.Log("Speed: " + newEnemy.getSpeed());
     }
 }

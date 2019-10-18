@@ -13,6 +13,10 @@ public class EnemyController : MonoBehaviour
         return this.speed;
     }
 
+    void Start() {
+        Destroy(gameObject, 20);
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
