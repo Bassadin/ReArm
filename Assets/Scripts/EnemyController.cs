@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float minSpeed = 10;
-    public float maxSpeed = 15;
+    public float minSpeed = 50;
+    public float maxSpeed = 80;
 
     private float speed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
+    public float getSpeed() {
+        return this.speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    void Awake()
     {
-        
+        speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
     }
 }
