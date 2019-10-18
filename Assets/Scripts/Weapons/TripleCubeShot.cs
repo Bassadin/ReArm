@@ -6,7 +6,6 @@ public class TripleCubeShot : BaseWeapon
 {
     public float horizontalSpeed = 350;
     public float verticalSpeed = 75;
-
     public override void fireWeapon(Vector3 spawnPosition) {
         GameObject upperBullet;
         upperBullet = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
