@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         rigidbody3d.AddForce(movement * speed);
 
         if(Input.GetKeyDown(KeyCode.Space)) {
-            this.equippedWeapon.fireWeapon(this.gameObject.transform);
+            this.equippedWeapon.fireWeapon(this.gameObject.transform.position + new Vector3(1, 0, 0));
         }
     }
 }
