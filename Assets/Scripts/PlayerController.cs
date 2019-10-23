@@ -18,13 +18,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log(equippedWeapon.shootingFrequency);
         weaponTimer += Time.deltaTime;
         if (weaponTimer >= equippedWeapon.shootingFrequency) {
-            this.equippedWeapon.fireWeapon(this.gameObject.transform.position + new Vector3(1, 0, 0));
+            this.equippedWeapon.fireWeapon(this.gameObject.transform.position + new Vector3(0, 2, 0));
             weaponTimer = 0;
         }
     }
 
     void FixedUpdate() {
-        Vector3 movement = new Vector3 (0, Input.GetAxis("Vertical"), 0);
+        Vector3 movement = new Vector3 (Input.GetAxis("Horizontal"), 0, 0);
         rigidbody3d.AddForce(movement * speed);
     }
 }

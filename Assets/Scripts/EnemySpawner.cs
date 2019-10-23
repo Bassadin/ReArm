@@ -22,10 +22,10 @@ public class EnemySpawner : MonoBehaviour
         EnemyController newEnemy = Instantiate(
             enemyToSpawn,
             new Vector3(
-                this.transform.position.x,
-                UnityEngine.Random.Range(-6.5f, 6.5f),
+                UnityEngine.Random.Range(this.transform.position.x - 3.5f, this.transform.position.x + 3.5f),
+                this.transform.position.y,
                 0),
             Quaternion.identity);
-        newEnemy.GetComponent<Rigidbody>().AddForce(new Vector3(-newEnemy.getSpeed(), 0, 0));
+        newEnemy.GetComponent<Rigidbody>().AddForce(new Vector3(0, -newEnemy.getSpeed(), 0));
     }
 }
