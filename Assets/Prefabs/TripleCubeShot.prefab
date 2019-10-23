@@ -46,5 +46,5 @@ MonoBehaviour:
   bulletToInstatiate: {fileID: 6526184862603577212, guid: 8b3896948741d4843b015988f42c4f90,
     type: 3}
   shootingFrequency: 1
-  horizontalSpeed: 300
-  verticalSpeed: 75
+  horizontalSpeed: 80
+  verticalSpeed: 300
