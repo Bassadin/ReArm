@@ -453,8 +453,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.6
+      scalar: 0.65
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5188,11 +5188,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.994
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617253597816885595, guid: 702c74fa9c50d39428bd23219ecf29cf,
-        type: 3}
-      propertyPath: spawnFrequency
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 702c74fa9c50d39428bd23219ecf29cf, type: 3}
