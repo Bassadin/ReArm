@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45138383, g: 0.5009198, b: 0.5725877, a: 1}
+  m_IndirectSpecularColor: {r: 0.4513843, g: 0.50092036, b: 0.57258826, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -358,7 +358,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.83671e-39, y: 0, z: 0, w: -6.190592e+9}
+  m_BoundingSphereOverride: {x: 4.442881e-27, y: 0, z: 0, w: 7e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -383,17 +383,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerBlocker_unten
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 5204842843560782033, guid: 0add74c64734fde4a97760966d8cd8af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -449,6 +438,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.994
       objectReference: {fileID: 0}
+    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerBlocker_unten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0add74c64734fde4a97760966d8cd8af, type: 3}
 --- !u!1 &1466921509
@@ -673,11 +673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5274326875592337467, guid: 702c74fa9c50d39428bd23219ecf29cf,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemySpawner
-      objectReference: {fileID: 0}
     - target: {fileID: 3947243080425143100, guid: 702c74fa9c50d39428bd23219ecf29cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -733,6 +728,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.994
       objectReference: {fileID: 0}
+    - target: {fileID: 5274326875592337467, guid: 702c74fa9c50d39428bd23219ecf29cf,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemySpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 702c74fa9c50d39428bd23219ecf29cf, type: 3}
 --- !u!1001 &3415334049311784747
@@ -742,17 +742,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerBlocker_oben
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 5204842843560782033, guid: 0add74c64734fde4a97760966d8cd8af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -808,6 +797,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.994
       objectReference: {fileID: 0}
+    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerBlocker_oben
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720877881488898583, guid: 0add74c64734fde4a97760966d8cd8af,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0add74c64734fde4a97760966d8cd8af, type: 3}
 --- !u!1001 &3924253504209812875
@@ -817,6 +817,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
+      propertyPath: m_Radius
+      value: 1.1413335
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6409346
+      objectReference: {fileID: 0}
     - target: {fileID: 3924253503704756506, guid: 30b88bbf880f2b248afd0a5c371983e0,
         type: 3}
       propertyPath: m_Name
@@ -877,22 +893,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
-      propertyPath: m_Radius
-      value: 1.1413335
-      objectReference: {fileID: 0}
-    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1838843672, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
-      propertyPath: m_Center.y
-      value: 0.6409346
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b88bbf880f2b248afd0a5c371983e0, type: 3}
 --- !u!1001 &7060903911236620657
@@ -906,6 +906,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060903910844005378, guid: e31ad80b05bc52b4eb49b7d2dc2e4226,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060903910844005378, guid: e31ad80b05bc52b4eb49b7d2dc2e4226,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060903910844005378, guid: e31ad80b05bc52b4eb49b7d2dc2e4226,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7060903910844005381, guid: e31ad80b05bc52b4eb49b7d2dc2e4226,
         type: 3}
@@ -971,11 +986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8658437453850750448, guid: e53d2539e7debf74ebd60d9d64d750d1,
-        type: 3}
-      propertyPath: m_Name
-      value: BackgroundStars
-      objectReference: {fileID: 0}
     - target: {fileID: 8658437453850750447, guid: e53d2539e7debf74ebd60d9d64d750d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1030,6 +1040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658437453850750448, guid: e53d2539e7debf74ebd60d9d64d750d1,
+        type: 3}
+      propertyPath: m_Name
+      value: BackgroundStars
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e53d2539e7debf74ebd60d9d64d750d1, type: 3}

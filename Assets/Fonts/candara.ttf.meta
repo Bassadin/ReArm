@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7b126d63c9a2d547a3530a125764008
+guid: 7282160dcec5c214eaba56e4c22fec6b
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Comic Sans MS
+  fontName: Candara
   fontNames:
-  - Comic Sans MS
+  - Candara
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
