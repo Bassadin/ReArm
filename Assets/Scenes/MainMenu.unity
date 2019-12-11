@@ -578,6 +578,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3c8732f2a918eeb4fb181e45b5e9abb7,
         type: 3}
+    - target: {fileID: 4288974691291434683, guid: 60d8b978b1323c449a1508cb638cdb2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7469607613932623921, guid: 60d8b978b1323c449a1508cb638cdb2e,
         type: 3}
       propertyPath: m_Name
@@ -716,6 +721,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288974691291434683, guid: 60d8b978b1323c449a1508cb638cdb2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288974691291434683, guid: 60d8b978b1323c449a1508cb638cdb2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7469607613932623921, guid: 60d8b978b1323c449a1508cb638cdb2e,
         type: 3}
@@ -900,6 +915,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288974691291434683, guid: 60d8b978b1323c449a1508cb638cdb2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288974691291434683, guid: 60d8b978b1323c449a1508cb638cdb2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288974691291434683, guid: 60d8b978b1323c449a1508cb638cdb2e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7469607613932623921, guid: 60d8b978b1323c449a1508cb638cdb2e,
         type: 3}
