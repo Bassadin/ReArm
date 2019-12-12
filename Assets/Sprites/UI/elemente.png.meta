@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: d38d910488ad55d49a06d68b8d8bb1a2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7573888234011492698
+    second: fire
+  - first:
+      213: 8205054288545818339
+    second: water
+  - first:
+      213: 2370186000780773309
+    second: nature
+  - first:
+      213: 5623091888650971032
+    second: wind
+  - first:
+      213: -9112374985325334938
+    second: lightning
+  - first:
+      213: 7948344115947766686
+    second: elemente_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,7 +114,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fire
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 113
+        width: 1026
+        height: 980
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311fd059a0369fd4db032a1163685196
+      internalID: 7573888234011492698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 0
+        width: 1030
+        height: 1102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd89febfbcbd8a4e92bd3a3eb7ea003
+      internalID: 8205054288545818339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nature
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 113
+        width: 1029
+        height: 980
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5b0eee94d99a54da2fb62b858c367f
+      internalID: 2370186000780773309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 0
+        width: 1030
+        height: 1102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166fe599f1a8e5147a41a8aea3c7e880
+      internalID: 5623091888650971032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning
+      rect:
+        serializedVersion: 2
+        x: 4410
+        y: 0
+        width: 1026
+        height: 1102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ceac9994c917f4db64e03c360625fd
+      internalID: -9112374985325334938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
