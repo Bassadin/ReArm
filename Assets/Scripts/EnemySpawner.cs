@@ -21,11 +21,9 @@ public class EnemySpawner : MonoBehaviour
     void spawnEnemy() {
         EnemyController newEnemy = Instantiate(
             enemyToSpawn,
-            new Vector3(
+            new Vector2(
                 UnityEngine.Random.Range(this.transform.position.x - 3.5f, this.transform.position.x + 3.5f),
-                this.transform.position.y,
-                0),
+                this.transform.position.y),
             Quaternion.identity);
-        newEnemy.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, -newEnemy.getSpeed()));
     }
 }

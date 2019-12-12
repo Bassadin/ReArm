@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(equippedWeapon.shootingFrequency);
         weaponTimer += Time.deltaTime;
         if (weaponTimer >= equippedWeapon.shootingFrequency)
         {

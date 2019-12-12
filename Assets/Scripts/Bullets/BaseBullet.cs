@@ -10,8 +10,9 @@ public class BaseBullet : MonoBehaviour
         Destroy(gameObject, 20);
     }
 
-    void OnCollisionEnter(Collision other) {
+    void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Enemy")) {
+            Debug.Log("bullet collision detected!");
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

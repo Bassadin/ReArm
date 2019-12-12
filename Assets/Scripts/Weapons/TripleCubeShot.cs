@@ -6,17 +6,17 @@ public class TripleCubeShot : BaseWeapon
 {
     public float horizontalSpeed = 5;
     public float verticalSpeed = 250;
-    public override void fireWeapon(Vector3 spawnPosition) {
+    public override void fireWeapon(Vector2 spawnPosition) {
         GameObject upperBullet;
         upperBullet = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
-        upperBullet.GetComponent<Rigidbody>().AddForce(new Vector3(-horizontalSpeed, verticalSpeed, 0));
+        upperBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(-horizontalSpeed, verticalSpeed));
 
         GameObject middleBullet;
         middleBullet = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
-        middleBullet.GetComponent<Rigidbody>().AddForce(new Vector3(0, verticalSpeed, 0));
+        middleBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, verticalSpeed));
         
         GameObject lowerBullet;
         lowerBullet = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
-        lowerBullet.GetComponent<Rigidbody>().AddForce(new Vector3(horizontalSpeed, verticalSpeed, 0));
+        lowerBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(horizontalSpeed, verticalSpeed));
     }
 }

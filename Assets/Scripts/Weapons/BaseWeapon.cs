@@ -7,5 +7,5 @@ public abstract class BaseWeapon : MonoBehaviour
     public GameObject bulletToInstatiate;
     public double shootingFrequency = 1.5f;
 
-    public abstract void fireWeapon(Vector3 spawnPosition);
+    public abstract void fireWeapon(Vector2 spawnPosition);
 }
