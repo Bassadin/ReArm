@@ -26,6 +26,6 @@ public class EnemySpawner : MonoBehaviour
                 this.transform.position.y,
                 0),
             Quaternion.identity);
-        newEnemy.GetComponent<Rigidbody>().AddForce(new Vector3(0, -newEnemy.getSpeed(), 0));
+        newEnemy.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, -newEnemy.getSpeed()));
     }
 }
