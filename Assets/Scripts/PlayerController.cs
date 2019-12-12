@@ -6,25 +6,28 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public BaseWeapon equippedWeapon;
-    private Rigidbody rigidbody3d;
+    private Rigidbody2D rigidbody2d;
     private float weaponTimer = 0;
 
     void Start()
     {
-        rigidbody3d = GetComponent<Rigidbody>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    void Update() {
+    void Update()
+    {
         Debug.Log(equippedWeapon.shootingFrequency);
         weaponTimer += Time.deltaTime;
-        if (weaponTimer >= equippedWeapon.shootingFrequency) {
-            this.equippedWeapon.fireWeapon(this.gameObject.transform.position + new Vector3(0, 2, 0));
+        if (weaponTimer >= equippedWeapon.shootingFrequency)
+        {
+            this.equippedWeapon.fireWeapon((Vector2)this.gameObject.transform.position + new Vector2(0, 2));
             weaponTimer = 0;
         }
     }
 
-    void FixedUpdate() {
-        Vector3 movement = new Vector3 (Input.GetAxis("Horizontal"), 0, 0);
-        rigidbody3d.AddForce(movement * speed);
+    void FixedUpdate()
+    {
+        Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), 0);
+        rigidbody2d.AddForce(movement * speed);
     }
 }
