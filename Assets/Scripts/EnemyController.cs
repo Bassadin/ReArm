@@ -19,7 +19,6 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject, 30);
     }
 
-    // Start is called before the first frame update
     void Awake()
     {
         speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
