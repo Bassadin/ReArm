@@ -28,6 +28,6 @@ public class EnemyController : MonoBehaviour
 
     private void Update() {
         _transform.Translate(Vector2.down * speed * Time.deltaTime);
-        _transform.Translate(Vector2.right * _transform.position.x * 0.23f * Time.deltaTime);
+        _transform.Translate(Vector2.right * _transform.position.x * 0.2f * Time.deltaTime);
     }
 }

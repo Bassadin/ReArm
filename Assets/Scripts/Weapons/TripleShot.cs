@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TripleCubeShot : BaseWeapon
+public class TripleShot : BaseWeapon
 {
     public float horizontalSpeed = 5;
     public float verticalSpeed = 250;
