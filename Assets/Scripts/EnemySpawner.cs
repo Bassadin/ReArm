@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
         EnemyController newEnemy = Instantiate(
             enemyToSpawn,
             new Vector2(
-                UnityEngine.Random.Range(this.transform.position.x - 2.5f, this.transform.position.x + 2.5f),
+                UnityEngine.Random.Range(this.transform.position.x - 2, this.transform.position.x + 2),
                 this.transform.position.y),
             Quaternion.identity);
     }

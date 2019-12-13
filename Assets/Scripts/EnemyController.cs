@@ -28,6 +28,12 @@ public class EnemyController : MonoBehaviour
 
     private void Update() {
         _transform.Translate(Vector2.down * speed * Time.deltaTime);
-        _transform.Translate(Vector2.right * _transform.position.x * 0.2f * Time.deltaTime);
+
+        //Drift to the side of the lane
+        _transform.Translate(Vector2.right * _transform.position.x * 0.15f * Time.deltaTime);
+
+        //Scale enemies bigger as they move downwards
+        float addedScaleSize = -_transform.position.y * 0.045f;
+        _transform.localScale = new Vector3(1 + addedScaleSize, 1 + addedScaleSize, 0);
     }
 }
