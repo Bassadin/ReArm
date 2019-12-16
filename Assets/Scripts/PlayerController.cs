@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +6,21 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public BaseWeapon equippedWeapon;
-    private Rigidbody2D rigidbody2d;
     private float weaponTimer = 0;
 
-    void Start()
+    private Transform _transform;
+
+    private Renderer _renderer;
+    float playerWidth;
+
+    void Awake()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        _transform = this.transform;
+        _renderer = this.GetComponent<Renderer>();
+    }
+
+    void Start() {
+        playerWidth = _renderer.bounds.size.x;
     }
 
     void Update()
@@ -26,7 +35,23 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), 0);
-        rigidbody2d.AddForce(movement * speed);
+        float horizontalAxis = Input.GetAxis("Horizontal");
+
+        if (_transform.position.x < Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x && horizontalAxis < 0)
+        {
+            horizontalAxis = 0;
+        }
+
+        if (_transform.position.x > Camera.main.ScreenToWorldPoint(new Vector2(Screen.width - playerWidth, 0)).x && horizontalAxis > 0)
+        {
+            horizontalAxis = 0;
+        }
+
+        _transform.Translate(new Vector3(horizontalAxis * speed, 0, 0));
+
+        if (Input.touchCount > 0)
+        {
+
+        }
     }
 }
