@@ -49,6 +49,7 @@ MonoBehaviour:
   speed: 0.25
   equippedWeapon: {fileID: 5835888503764898711, guid: 44333a6ef83107a40b6f620224da6fd8,
     type: 3}
+  healthBarReference: {fileID: 0}
 --- !u!212 &3924253504209812879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -106,9 +107,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3924253503704756506}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 50
@@ -117,7 +118,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 6
 --- !u!70 &4851181104257828383
 CapsuleCollider2D:

@@ -35,4 +35,11 @@ public class EnemyController : MonoBehaviour
         float addedScaleSize = -_transform.position.y * 0.045f;
         _transform.localScale = new Vector3(1 + addedScaleSize, 1 + addedScaleSize, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Player")) {
+            other.gameObject.GetComponent<PlayerController>().changeLife(-1);
+            Destroy(gameObject);
+        }    
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class PlayerController : MonoBehaviour
     private Transform _transform;
 
     private Renderer _renderer;
+    private int lifePoints;
     float playerWidth;
+
+    public HealthBar healthBarReference;
 
     void Awake()
     {
@@ -20,6 +24,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void Start() {
+        lifePoints = 3;
+        healthBarReference.setHealthToValue(lifePoints);
         playerWidth = _renderer.bounds.size.x;
     }
 
@@ -53,5 +59,21 @@ public class PlayerController : MonoBehaviour
         {
 
         }
+    }
+
+    public void changeLife(int changeAmount) {
+        lifePoints = Mathf.Clamp(getLifePoints() + changeAmount, 0, 3);
+        healthBarReference.setHealthToValue(getLifePoints());
+
+        Debug.Log("Player life has been set to: " + getLifePoints());
+
+        if (lifePoints == 0) {
+            //Throw the user back into the main menu for now
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    public int getLifePoints() {
+        return lifePoints;
     }
 }
