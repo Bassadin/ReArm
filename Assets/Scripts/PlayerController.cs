@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : BaseDamageableCharacterController
 {
     public float speed;
     public BaseWeapon equippedWeapon;
@@ -12,20 +12,20 @@ public class PlayerController : MonoBehaviour
     private Transform _transform;
 
     private Renderer _renderer;
-    private int lifePoints;
     float playerWidth;
 
     public HealthBar healthBarReference;
 
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         _transform = this.transform;
         _renderer = this.GetComponent<Renderer>();
     }
 
-    void Start() {
-        lifePoints = 3;
-        healthBarReference.setHealthToValue(lifePoints);
+    void Start()
+    {
+        healthBarReference.setHealthToValue(getLifePoints());
         playerWidth = _renderer.bounds.size.x;
     }
 
@@ -61,19 +61,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void changeLife(int changeAmount) {
-        lifePoints = Mathf.Clamp(getLifePoints() + changeAmount, 0, 3);
+    public override void changeLife(int changeAmount)
+    {
+        base.changeLife(changeAmount);
         healthBarReference.setHealthToValue(getLifePoints());
-
-        Debug.Log("Player life has been set to: " + getLifePoints());
-
-        if (lifePoints == 0) {
-            //Throw the user back into the main menu for now
-            SceneManager.LoadScene(0);
-        }
     }
 
-    public int getLifePoints() {
-        return lifePoints;
+    public override void onDeath()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public override int getMaxLife()
+    {
+        return 3;
     }
 }

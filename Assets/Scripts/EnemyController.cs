@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : BaseDamageableCharacterController
 {
     public float minSpeed = 50;
     public float maxSpeed = 80;
@@ -11,21 +11,27 @@ public class EnemyController : MonoBehaviour
 
     private Transform _transform;
 
-    public float getSpeed() {
+
+
+    public float getSpeed()
+    {
         return this.speed;
     }
 
-    void Start() {
+    void Start()
+    {
         Destroy(gameObject, 30);
     }
 
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         speed = UnityEngine.Random.Range(minSpeed, maxSpeed);
         _transform = this.transform;
     }
 
-    private void Update() {
+    private void Update()
+    {
         _transform.Translate(Vector2.down * speed * Time.deltaTime);
 
         //Drift to the side of the lane
@@ -36,10 +42,22 @@ public class EnemyController : MonoBehaviour
         _transform.localScale = new Vector3(1 + addedScaleSize, 1 + addedScaleSize, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Player")) {
-            other.gameObject.GetComponent<PlayerController>().changeLife(-1);
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerController>().dealOneDamage();
             Destroy(gameObject);
-        }    
+        }
+    }
+
+    public override void onDeath()
+    {
+        Destroy(this.gameObject);
+    }
+
+    public override int getMaxLife()
+    {
+        return 1;
     }
 }
