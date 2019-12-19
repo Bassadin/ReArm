@@ -7,7 +7,7 @@ public class DragFingerMove : MonoBehaviour
     private Vector2 touchPosition;
     private Rigidbody2D rigidbody2d;
     private Vector2 direction;
-    private float moveSpeed = 10f;
+    public float moveSpeed = 10f;
 
     // Use this for initialization
     private void Start()

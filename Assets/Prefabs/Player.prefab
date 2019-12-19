@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3924253504209812879}
   - component: {fileID: 3924253504209812878}
   - component: {fileID: 4851181104257828383}
+  - component: {fileID: 4149545446657272207}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3924253503704756506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.362, y: -1.362, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 0.63245, y: 0.63245, z: 0.973}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
-  equippedWeapon: {fileID: 5835888503764898711, guid: 44333a6ef83107a40b6f620224da6fd8,
+  equippedWeapon: {fileID: -1402442668169164408, guid: 778f45bf5e568a1408b444973af3e203,
     type: 3}
   healthBarReference: {fileID: 0}
 --- !u!212 &3924253504209812879
@@ -136,3 +137,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.39903146, y: 0}
   m_Size: {x: 3.2159169, y: 7.3299994}
   m_Direction: 0
+--- !u!114 &4149545446657272207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924253503704756506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2143217bb8da1a54bbbf12f2351860ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
