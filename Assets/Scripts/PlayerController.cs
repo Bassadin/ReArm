@@ -69,7 +69,8 @@ public class PlayerController : BaseDamageableCharacterController
 
     public override void onDeath()
     {
-        SceneManager.LoadScene(0);
+        StaticGameInfo.setLastGameScore(ScoreManager.Instance.getScore());
+        SceneManager.LoadScene(3);
     }
 
     public override int getMaxLife()
