@@ -266,6 +266,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &251386191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3924253503704756506, guid: 30b88bbf880f2b248afd0a5c371983e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3924253504209812875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &251386197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251386191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2143217bb8da1a54bbbf12f2351860ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &347239129
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +596,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.03e-42, y: 0, z: 1.16e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.4e-44, z: 1.65e-42, w: 1.05e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -988,7 +1006,7 @@ PrefabInstance:
     - target: {fileID: 3924253504209812878, guid: 30b88bbf880f2b248afd0a5c371983e0,
         type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3924253504209812879, guid: 30b88bbf880f2b248afd0a5c371983e0,
         type: 3}
