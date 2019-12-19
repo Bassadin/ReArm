@@ -11,8 +11,6 @@ public class EnemyController : BaseDamageableCharacterController
 
     private Transform _transform;
 
-
-
     public float getSpeed()
     {
         return this.speed;
@@ -54,6 +52,9 @@ public class EnemyController : BaseDamageableCharacterController
     public override void onDeath()
     {
         Destroy(this.gameObject);
+        //Hardcoded score value for enemies for now
+        //TODO Once the socre somewhere else (maybe superclass)
+        ScoreManager.Instance.addScore(50);
     }
 
     public override int getMaxLife()
