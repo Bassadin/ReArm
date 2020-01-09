@@ -54,11 +54,6 @@ public class PlayerController : BaseDamageableCharacterController
         }
 
         _transform.Translate(new Vector3(horizontalAxis * speed, 0, 0));
-
-        if (Input.touchCount > 0)
-        {
-
-        }
     }
 
     public override void changeLife(int changeAmount)
