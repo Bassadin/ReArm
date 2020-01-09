@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 755378605952220727}
   - component: {fileID: 540151815519441809}
   m_Layer: 8
-  m_Name: CubeBullet
+  m_Name: BaseBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6164e0e32c9046488db992e28a699ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!50 &1299687680148954243
 Rigidbody2D:
   serializedVersion: 4
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: -166154235
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8205054288545818339, guid: d38d910488ad55d49a06d68b8d8bb1a2,
+  m_Sprite: {fileID: 7573888234011492698, guid: d38d910488ad55d49a06d68b8d8bb1a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
