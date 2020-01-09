@@ -34,7 +34,7 @@ public class BaseBullet : MonoBehaviour
     void Update()
     {
         //Scale enemies bigger as they move downwards
-        float addedScaleSize = _transform.position.y * -0.025f;
+        float addedScaleSize = _transform.position.y * -0.01f;
         _transform.localScale = new Vector3(baseScale.x + addedScaleSize, baseScale.y + addedScaleSize, 0);
     }
 }

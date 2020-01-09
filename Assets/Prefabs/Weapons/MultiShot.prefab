@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2021342826935733584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc28b8733546614b92ac1ef05f0d492, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bfff27d1f2e1b24bb51f8a644cdddfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletToInstatiate: {fileID: 6526184862603577212, guid: 8b3896948741d4843b015988f42c4f90,
     type: 3}
   shootingFrequency: 1.5
-  horizontalSpeed: 5
+  upgradeLevel: 0
+  maxUpgradeLevel: 2
+  maxHorizontalSpeed: 30
   verticalSpeed: 250
 --- !u!1001 &7918261284289754252
 PrefabInstance:
@@ -27,7 +29,7 @@ PrefabInstance:
     - target: {fileID: 8209517003448809948, guid: a463366e43f944141be75dc2efe61d33,
         type: 3}
       propertyPath: m_Name
-      value: TripleShot
+      value: MultiShot
       objectReference: {fileID: 0}
     - target: {fileID: 8876329654051199561, guid: a463366e43f944141be75dc2efe61d33,
         type: 3}
