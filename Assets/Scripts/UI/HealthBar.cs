@@ -14,9 +14,25 @@ public class HealthBar : MonoBehaviour
     //All images
     private Image[] healthImages;
 
+    //Global instance
+    private static HealthBar _instance;
+
+    public static HealthBar Instance { get { return _instance; } }
+
+    private Text scoreText;
+
     void Awake()
     {
-        healthImages = new Image[3]{ image1, image2, image3 };
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+
+        healthImages = new Image[3] { image1, image2, image3 };
     }
 
     private void Start()

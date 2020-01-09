@@ -7,14 +7,12 @@ public class PlayerController : BaseDamageableCharacterController
 {
     public float speed;
     public BaseWeapon equippedWeapon;
-    private float weaponTimer = 0;
+    public BaseWeapon weaponToInstatiate;
 
     private Transform _transform;
 
     private Renderer _renderer;
     float playerWidth;
-
-    public HealthBar healthBarReference;
 
     public override void Awake()
     {
@@ -23,20 +21,16 @@ public class PlayerController : BaseDamageableCharacterController
         _renderer = this.GetComponent<Renderer>();
     }
 
-    void Start()
-    {
-        healthBarReference.setHealthToValue(getLifePoints());
-        playerWidth = _renderer.bounds.size.x;
+    public void equipWeapon(BaseWeapon weaponToEquip) {
+        this.equippedWeapon = Instantiate(weaponToEquip);
+        this.equippedWeapon.playerTransformReference = this.gameObject.transform;
     }
 
-    void Update()
+    void Start()
     {
-        weaponTimer += Time.deltaTime;
-        if (weaponTimer >= equippedWeapon.shootingFrequency)
-        {
-            this.equippedWeapon.fireWeapon((Vector2)this.gameObject.transform.position + new Vector2(0, 2));
-            weaponTimer = 0;
-        }
+        HealthBar.Instance.setHealthToValue(getLifePoints());
+        playerWidth = _renderer.bounds.size.x;
+        equipWeapon(weaponToInstatiate);
     }
 
     void FixedUpdate()
@@ -55,7 +49,8 @@ public class PlayerController : BaseDamageableCharacterController
 
         _transform.Translate(new Vector3(horizontalAxis * speed, 0, 0));
 
-        if (Input.GetKeyUp(KeyCode.U)) {
+        if (Input.GetKeyUp(KeyCode.U))
+        {
             this.equippedWeapon.upgradeWeaponLevel();
         }
     }
@@ -63,7 +58,7 @@ public class PlayerController : BaseDamageableCharacterController
     public override void changeLife(int changeAmount)
     {
         base.changeLife(changeAmount);
-        healthBarReference.setHealthToValue(getLifePoints());
+        HealthBar.Instance.setHealthToValue(getLifePoints());
     }
 
     public override void onDeath()

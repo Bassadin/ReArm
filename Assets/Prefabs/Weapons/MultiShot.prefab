@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletToInstatiate: {fileID: 6526184862603577212, guid: 8b3896948741d4843b015988f42c4f90,
     type: 3}
-  shootingFrequency: 1.5
+  shootingFrequency: 0.5
   upgradeLevel: 0
   maxUpgradeLevel: 2
-  maxHorizontalSpeed: 30
+  maxHorizontalSpeed: 33
   verticalSpeed: 250
 --- !u!1001 &7918261284289754252
 PrefabInstance:
