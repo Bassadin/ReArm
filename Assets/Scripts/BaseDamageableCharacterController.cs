@@ -15,13 +15,10 @@ public abstract class BaseDamageableCharacterController : MonoBehaviour
 
     public virtual void changeLife(int changeAmount)
     {
-        Debug.Log("Changing life of " + this.gameObject + " by " + changeAmount);
         currentLifePoints = Mathf.Clamp(getLifePoints() + changeAmount, 0, getMaxLife());
-        Debug.Log("Life total of  " + this.gameObject + " is now " + currentLifePoints);
 
         if (currentLifePoints == 0)
         {
-            Debug.Log("Triggering onDeath() of  " + this.gameObject);
             onDeath();
         }
     }

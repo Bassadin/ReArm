@@ -16,7 +16,6 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public virtual void Update()
     {
-        Debug.Log("Weapon update");
         weaponTimer += Time.deltaTime;
         if (weaponTimer >= shootingFrequency)
         {
