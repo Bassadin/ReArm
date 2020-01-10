@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4513843, g: 0.50092036, b: 0.57258826, a: 1}
+  m_IndirectSpecularColor: {r: 0.45138383, g: 0.5009198, b: 0.5725877, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1187,13 +1187,18 @@ PrefabInstance:
         type: 3}
       propertyPath: equippedWeapon
       value: 
-      objectReference: {fileID: -6972427250716221981, guid: 44333a6ef83107a40b6f620224da6fd8,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3924253503704756509, guid: 30b88bbf880f2b248afd0a5c371983e0,
         type: 3}
       propertyPath: speed
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 3924253503704756509, guid: 30b88bbf880f2b248afd0a5c371983e0,
+        type: 3}
+      propertyPath: weaponToInstatiate
+      value: 
+      objectReference: {fileID: -6972427250716221981, guid: 44333a6ef83107a40b6f620224da6fd8,
+        type: 3}
     - target: {fileID: 3924253503704756510, guid: 30b88bbf880f2b248afd0a5c371983e0,
         type: 3}
       propertyPath: m_LocalPosition.x
