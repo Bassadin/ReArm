@@ -7,7 +7,6 @@ public class MultiShot : BaseWeapon
     public float maxHorizontalSpeed = 5;
     public float verticalSpeed = 250;
 
-    private float arc = 0.25f * Mathf.PI;
     public override void fireWeapon(Vector2 spawnPosition)
     {
         GameObject middleBullet;
