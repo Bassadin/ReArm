@@ -13,17 +13,15 @@ public class MultiShot : BaseWeapon
         middleBullet = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
         middleBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, verticalSpeed));
 
-        for (int i = 1; i <= upgradeLevel; i++)
+        if (isWeaponOvercharged)
         {
-
             GameObject newBulletL;
             newBulletL = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
-            newBulletL.GetComponent<Rigidbody2D>().AddForce(new Vector2(-i * (maxHorizontalSpeed / upgradeLevel), verticalSpeed));
+            newBulletL.GetComponent<Rigidbody2D>().AddForce(new Vector2(-maxHorizontalSpeed, verticalSpeed));
 
             GameObject newBulletR;
             newBulletR = Instantiate(this.bulletToInstatiate, spawnPosition, Quaternion.identity);
-            newBulletR.GetComponent<Rigidbody2D>().AddForce(new Vector2(i * (maxHorizontalSpeed / upgradeLevel), verticalSpeed));
-
+            newBulletR.GetComponent<Rigidbody2D>().AddForce(new Vector2(maxHorizontalSpeed, verticalSpeed));
         }
     }
 }

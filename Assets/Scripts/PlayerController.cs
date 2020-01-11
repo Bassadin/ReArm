@@ -48,11 +48,6 @@ public class PlayerController : BaseDamageableCharacterController
         }
 
         _transform.Translate(new Vector3(horizontalAxis * speed, 0, 0));
-
-        if (Input.GetKeyUp(KeyCode.U))
-        {
-            this.equippedWeapon.upgradeWeaponLevel();
-        }
     }
 
     public override void changeLife(int changeAmount)

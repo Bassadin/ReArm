@@ -9,26 +9,51 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public Transform playerTransformReference;
 
-    public int upgradeLevel = 0;
-    public int maxUpgradeLevel = 2;
+    public float chargeAmount = 0;
+    public float maxChargeLevel = 100;
 
-    private float weaponTimer = 0;
+    protected bool isWeaponOvercharged = false;
+    private float overchargeDepletionRate = 25;
+
+    private float weaponFiringTimer = 0;
 
     public virtual void Update()
     {
-        weaponTimer += Time.deltaTime;
-        if (weaponTimer >= shootingFrequency)
+        if (Input.GetKeyUp(KeyCode.U))
+        {
+            upgradeWeaponLevelBy(25);
+        }
+        weaponFiringTimer += Time.deltaTime;
+        if (weaponFiringTimer >= shootingFrequency)
         {
             fireWeapon((Vector2)playerTransformReference.position + new Vector2(0, 2));
-            weaponTimer = 0;
+            weaponFiringTimer = 0;
+        }
+
+        if (chargeAmount >= maxChargeLevel) {
+            isWeaponOvercharged = true;
+        }
+        if (isWeaponOvercharged) {
+            chargeAmount -= overchargeDepletionRate * Time.deltaTime;
+            if (chargeAmount <= 0) {
+                isWeaponOvercharged = false;
+                chargeAmount = 0;
+            }
+            updateWeaponLevelInUI();
         }
     }
 
     public abstract void fireWeapon(Vector2 spawnPosition);
 
-    public void upgradeWeaponLevel()
+    public void upgradeWeaponLevelBy(float upgradeAmount)
     {
-        upgradeLevel = Mathf.Clamp(upgradeLevel + 1, 0, maxUpgradeLevel);
-        UpgradeDisplayManager.Instance.setUpgradeLevelToDisplay(this.upgradeLevel, this.maxUpgradeLevel);
+        chargeAmount = Mathf.Clamp(chargeAmount + upgradeAmount, 0, maxChargeLevel);
+        updateWeaponLevelInUI();
     }
+
+    public void updateWeaponLevelInUI()
+    {
+        UpgradeDisplayManager.Instance.setUpgradeLevelToDisplay(this.chargeAmount, this.maxChargeLevel);
+    }
+
 }
