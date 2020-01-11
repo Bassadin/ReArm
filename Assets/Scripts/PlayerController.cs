@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : BaseDamageableCharacterController
 {
+    private static PlayerController _instance;
+
+    public static PlayerController Instance { get { return _instance; } }
     public float speed;
     public BaseWeapon equippedWeapon;
     public BaseWeapon weaponToInstatiate;
@@ -16,6 +19,15 @@ public class PlayerController : BaseDamageableCharacterController
 
     public override void Awake()
     {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+
         base.Awake();
         _transform = this.transform;
         _renderer = this.GetComponent<Renderer>();

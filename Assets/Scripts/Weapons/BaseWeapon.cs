@@ -9,7 +9,7 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public Transform playerTransformReference;
 
-    public float chargeAmount = 0;
+    public float currentChargeLevel = 0;
     public float maxChargeLevel = 100;
 
     protected bool isWeaponOvercharged = false;
@@ -19,10 +19,10 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public virtual void Update()
     {
-        if (Input.GetKeyUp(KeyCode.U))
-        {
-            upgradeWeaponLevelBy(25);
-        }
+        // if (Input.GetKeyUp(KeyCode.U))
+        // {
+        //     chargeWeapon(25);
+        // }
         weaponFiringTimer += Time.deltaTime;
         if (weaponFiringTimer >= shootingFrequency)
         {
@@ -30,14 +30,14 @@ public abstract class BaseWeapon : MonoBehaviour
             weaponFiringTimer = 0;
         }
 
-        if (chargeAmount >= maxChargeLevel) {
+        if (currentChargeLevel >= maxChargeLevel) {
             isWeaponOvercharged = true;
         }
         if (isWeaponOvercharged) {
-            chargeAmount -= overchargeDepletionRate * Time.deltaTime;
-            if (chargeAmount <= 0) {
+            currentChargeLevel -= overchargeDepletionRate * Time.deltaTime;
+            if (currentChargeLevel <= 0) {
                 isWeaponOvercharged = false;
-                chargeAmount = 0;
+                currentChargeLevel = 0;
             }
             updateWeaponLevelInUI();
         }
@@ -45,15 +45,15 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public abstract void fireWeapon(Vector2 spawnPosition);
 
-    public void upgradeWeaponLevelBy(float upgradeAmount)
+    public void chargeWeapon(float upgradeAmount)
     {
-        chargeAmount = Mathf.Clamp(chargeAmount + upgradeAmount, 0, maxChargeLevel);
+        currentChargeLevel = Mathf.Clamp(currentChargeLevel + upgradeAmount, 0, maxChargeLevel);
         updateWeaponLevelInUI();
     }
 
     public void updateWeaponLevelInUI()
     {
-        UpgradeDisplayManager.Instance.setUpgradeLevelToDisplay(this.chargeAmount, this.maxChargeLevel);
+        UpgradeDisplayManager.Instance.setUpgradeLevelToDisplay(this.currentChargeLevel, this.maxChargeLevel);
     }
 
 }
