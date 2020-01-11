@@ -29,6 +29,6 @@ public abstract class BaseWeapon : MonoBehaviour
     public void upgradeWeaponLevel()
     {
         upgradeLevel = Mathf.Clamp(upgradeLevel + 1, 0, maxUpgradeLevel);
-        UpgradeTextManager.Instance.setUpgradeLevelToDisplay(this.upgradeLevel);
+        UpgradeDisplayManager.Instance.setUpgradeLevelToDisplay(this.upgradeLevel, this.maxUpgradeLevel);
     }
 }
