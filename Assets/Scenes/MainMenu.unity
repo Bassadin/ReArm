@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 622659925}
   - component: {fileID: 622659927}
   - component: {fileID: 622659926}
+  - component: {fileID: 622659928}
   m_Layer: 5
   m_Name: GolemImage
   m_TagString: Untagged
@@ -479,6 +480,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622659924}
   m_CullTransparentMesh: 0
+--- !u!114 &622659928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622659924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.25882354}
+  m_EffectDistance: {x: 41.83, y: 32.28}
+  m_UseGraphicAlpha: 1
 --- !u!1 &664631154
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +506,7 @@ GameObject:
   - component: {fileID: 664631155}
   - component: {fileID: 664631157}
   - component: {fileID: 664631156}
+  - component: {fileID: 664631158}
   m_Layer: 5
   m_Name: Destructment Title Text
   m_TagString: Untagged
@@ -556,6 +573,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664631154}
   m_CullTransparentMesh: 0
+--- !u!114 &664631158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664631154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.35686275}
+  m_EffectDistance: {x: 5, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1154703661
 GameObject:
   m_ObjectHideFlags: 0
