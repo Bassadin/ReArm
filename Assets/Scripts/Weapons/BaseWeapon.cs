@@ -26,7 +26,7 @@ public abstract class BaseWeapon : MonoBehaviour
         weaponFiringTimer += Time.deltaTime;
         if (weaponFiringTimer >= shootingFrequency)
         {
-            fireWeapon((Vector2)playerTransformReference.position + new Vector2(0, 2));
+            fireWeapon((Vector2)playerTransformReference.position + new Vector2(-1, 2));
             weaponFiringTimer = 0;
         }
 
