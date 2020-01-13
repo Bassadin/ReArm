@@ -13,7 +13,7 @@ public abstract class BaseWeapon : MonoBehaviour
     public float maxChargeLevel = 100;
 
     protected bool isWeaponOvercharged = false;
-    private float overchargeDepletionRate = 25;
+    private float overchargeDepletionRate = 33;
 
     private float weaponFiringTimer = 0;
 
