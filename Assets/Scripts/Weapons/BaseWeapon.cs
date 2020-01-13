@@ -13,7 +13,7 @@ public abstract class BaseWeapon : MonoBehaviour
     public float maxChargeLevel = 100;
 
     protected bool isWeaponOvercharged = false;
-    private float overchargeDepletionRate = 20;
+    private float overchargeDepletionRate = 33;
 
     private float weaponFiringTimer = 0;
 
@@ -30,12 +30,15 @@ public abstract class BaseWeapon : MonoBehaviour
             weaponFiringTimer = 0;
         }
 
-        if (currentChargeLevel >= maxChargeLevel) {
+        if (currentChargeLevel >= maxChargeLevel)
+        {
             isWeaponOvercharged = true;
         }
-        if (isWeaponOvercharged) {
+        if (isWeaponOvercharged)
+        {
             currentChargeLevel -= overchargeDepletionRate * Time.deltaTime;
-            if (currentChargeLevel <= 0) {
+            if (currentChargeLevel <= 0)
+            {
                 isWeaponOvercharged = false;
                 currentChargeLevel = 0;
             }
@@ -47,8 +50,11 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public void chargeWeapon(float upgradeAmount)
     {
-        currentChargeLevel = Mathf.Clamp(currentChargeLevel + upgradeAmount, 0, maxChargeLevel);
-        updateWeaponLevelInUI();
+        if (!isWeaponOvercharged)
+        {
+            currentChargeLevel = Mathf.Clamp(currentChargeLevel + upgradeAmount, 0, maxChargeLevel);
+            updateWeaponLevelInUI();
+        }
     }
 
     public void updateWeaponLevelInUI()

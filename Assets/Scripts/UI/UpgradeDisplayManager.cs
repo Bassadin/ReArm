@@ -30,10 +30,8 @@ public class UpgradeDisplayManager : MonoBehaviour
 
     public void setUpgradeLevelToDisplay(float setChargeLevel, float maxChargeLevel)
     {
-        Debug.Log(setChargeLevel + "/" + maxChargeLevel);
         staffMask.rectTransform.SetSizeWithCurrentAnchors(
             RectTransform.Axis.Vertical,
             (float)maxHeight * (Mathf.Clamp(setChargeLevel, 0, maxChargeLevel) / maxChargeLevel));
-        Debug.Log("Set upgrade bar height to: " + (float)maxHeight * (Mathf.Clamp(setChargeLevel, 0, maxChargeLevel) / maxChargeLevel));
     }
 }
