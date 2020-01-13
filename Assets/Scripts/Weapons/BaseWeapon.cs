@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class BaseWeapon : MonoBehaviour
 {
     public GameObject bulletToInstatiate;
-    public float shootingFrequency = 1.5f;
+    public float shootingFrequency = 1.1f;
 
     public Transform playerTransformReference;
 
@@ -13,7 +13,7 @@ public abstract class BaseWeapon : MonoBehaviour
     public float maxChargeLevel = 100;
 
     protected bool isWeaponOvercharged = false;
-    private float overchargeDepletionRate = 33;
+    private float overchargeDepletionRate = 20;
 
     private float weaponFiringTimer = 0;
 

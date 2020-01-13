@@ -55,11 +55,11 @@ public class EnemyController : BaseDamageableCharacterController
         //Hardcoded score value for enemies for now
         //TODO Once the score somewhere else (maybe superclass)
         ScoreManager.Instance.addScore(50);
-        PlayerController.Instance.equippedWeapon.chargeWeapon(20);
+        PlayerController.Instance.equippedWeapon.chargeWeapon(10);
     }
 
     public override int getMaxLife()
     {
-        return 4;
+        return 3;
     }
 }
